@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 host = socket.gethostname()
 port = 4005
-server = ("DESKTOP-G530RU6", 4000) #le host name du serveur (host si on travail sur le même PC)
+server = ("DESKTOP-G530RU6", 4000) #le host name du serveur (host si on travail sur le même PC | "DESKTOP-G530RU6" si on travail avec mon PC perso | "PO-7545" si on travail avec mon PC pro)
 
 your_board, his_board = pd.DataFrame([[0]*9]*9, columns=["A","B","C","D","E","F","G","H","I"], index=range(1,10)), pd.DataFrame([[0]*9]*9, columns=["A","B","C","D","E","F","G","H","I"], index=range(1,10))
 your_boat, his_boat = [], []

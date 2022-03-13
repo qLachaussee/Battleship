@@ -266,21 +266,34 @@
     </div>
     <br/>
 
-    {% if your_action %}
-      
+    {% if win == "En cours" %}
+      <center>
+        <h2 class="let_space" style="margin-top:-0.6em"><i style="color:lightskyblue;">{{your_reward.length}}Ton resultat :</i> 
+          {% if your_reward[-1] == "Tombé" %}
+            Tu l'as loupé mec, ressaisis-toi !</h2>
+          {% elif your_reward[-1] == "Touché" %}
+            Wou-hou, en plein dans sa gueule !</h2>
+        {% endif %}
+        <h2 class="let_space"><i style="color:lightcoral;">Son resultat :</i>
+        {% if his_reward[-1] == "Tombé" %}
+          T'inquiète, il t'a loupé ce hmar !</h2>
+        {% elif his_reward[-1] == "Touché" %}
+          Attention, il t'a coulé un bateau ce bâtard !</h2>
+        {% endif %}
+      </center> 
     {% endif %}
 
     {% if win != "En cours" %}
       <center>
-        <h2 class="let_space" style="margin-top:-0.6em">Vous avez {{win}}</h2>
-        <h3 class="let_space">Historique : {{your_action}}</h3>
+        <h2 class="let_space" style="margin-top:-0.6em; color:lightgoldenrodyellow;">Vous avez {{win}} !!!</h2>
+        <h3 class="let_space" style="color:seashell;">Historique : {{your_action}}</h3>
       </center> 
       <script>
         (function () {
           var submits = document.querySelectorAll('input[type=submit]');
           var win = {{win | tojson}};
           if (win == "Gagné"){
-            alert("Féléicitation, vous avez gagné la bataille.\n\nReste à gagner la guerre !");
+            alert("Félicitation, vous avez gagné la bataille.\n\nReste à gagner la guerre !");
           }
           else if (win == "Perdu")
           {
