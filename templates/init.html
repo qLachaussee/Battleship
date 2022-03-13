@@ -1,0 +1,176 @@
+<html> 
+	<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" type="text/css" href="../static/index.css"> 
+    <script type="text/javascript">
+      function chkcontrol(j) 
+      {
+        var checkboxes = document.querySelectorAll('input[type=checkbox]')
+        var total = 0;
+        for(var i=0; i < checkboxes.length; i++)
+        {
+          if(checkboxes[i].checked)
+          {
+            total = total + 1;
+          }
+          if(total > 3){
+            alert("Please Select only three") 
+            checkboxes[j].checked = false ;
+            return false;
+          }
+        }
+      }
+      function valider() 
+      {
+        var checkboxes = document.querySelectorAll('input[type=checkbox]')
+        var total = 0;
+        for(var i=0; i < checkboxes.length; i++)
+        {
+          if(checkboxes[i].checked)
+          {
+            total = total + 1;
+          }
+        }
+        if(total != 3){
+          alert("Faut 3 bateaux mec, pas " + total + ".\n\nFais un effort, merde !") 
+          return false;
+        }
+      } 
+      </script>
+	</head>
+	
+	<body class="bg">
+      <form class="form" action="/home" method="POST" onsubmit="return valider()">
+        <h1>Choisissez 3 cases pour placer vos bateaux</h1>
+        <table>  
+          <tr>
+            <td class="colonne ligne"></td>
+            <td class="colonne">A</td>
+            <td class="colonne">B</td> 
+            <td class="colonne">C</td>
+            <td class="colonne">D</td>
+            <td class="colonne">E</td>
+            <td class="colonne">F</td>
+            <td class="colonne">G</td>
+            <td class="colonne">H</td>
+            <td class="colonne">I</td>
+          </tr>
+          <tr>
+            <td class="ligne">1</td>
+            <td class="case" id="A1"><label class="container"><input type="checkbox" name="A1" value="1" onclick="chkcontrol(0)"><span class="checkmark"></span></label></td>
+            <td class="case" id="B1"><label class="container"><input type="checkbox" name="B1" value="1" onclick="chkcontrol(1)"><span class="checkmark"></span></label></td>
+            <td class="case" id="C1"><label class="container"><input type="checkbox" name="C1" value="1" onclick="chkcontrol(2)"><span class="checkmark"></span></label></td>
+            <td class="case" id="D1"><label class="container"><input type="checkbox" name="D1" value="1" onclick="chkcontrol(3)"><span class="checkmark"></span></label></td>
+            <td class="case" id="E1"><label class="container"><input type="checkbox" name="E1" value="1" onclick="chkcontrol(4)"><span class="checkmark"></span></label></td>
+            <td class="case" id="F1"><label class="container"><input type="checkbox" name="F1" value="1" onclick="chkcontrol(5)"><span class="checkmark"></span></label></td>
+            <td class="case" id="G1"><label class="container"><input type="checkbox" name="G1" value="1" onclick="chkcontrol(6)"><span class="checkmark"></span></label></td>
+            <td class="case" id="H1"><label class="container"><input type="checkbox" name="H1" value="1" onclick="chkcontrol(7)"><span class="checkmark"></span></label></td>
+            <td class="case" id="I1"><label class="container"><input type="checkbox" name="I1" value="1" onclick="chkcontrol(8)"><span class="checkmark"></span></label></td>
+          </tr>
+          <tr>
+            <td class="ligne">2</td>
+            <td class="case" id="A2"><label class="container"><input type="checkbox" name="A2" value="1" onclick="chkcontrol(9)"><span class="checkmark"></span></label></td>
+            <td class="case" id="B2"><label class="container"><input type="checkbox" name="B2" value="1" onclick="chkcontrol(10)"><span class="checkmark"></span></label></td>
+            <td class="case" id="C2"><label class="container"><input type="checkbox" name="C2" value="1" onclick="chkcontrol(11)"><span class="checkmark"></span></label></td>
+            <td class="case" id="D2"><label class="container"><input type="checkbox" name="D2" value="1" onclick="chkcontrol(12)"><span class="checkmark"></span></label></td>
+            <td class="case" id="E2"><label class="container"><input type="checkbox" name="E2" value="1" onclick="chkcontrol(13)"><span class="checkmark"></span></label></td>
+            <td class="case" id="F2"><label class="container"><input type="checkbox" name="F2" value="1" onclick="chkcontrol(14)"><span class="checkmark"></span></label></td>
+            <td class="case" id="G2"><label class="container"><input type="checkbox" name="G2" value="1" onclick="chkcontrol(15)"><span class="checkmark"></span></label></td>
+            <td class="case" id="H2"><label class="container"><input type="checkbox" name="H2" value="1" onclick="chkcontrol(16)"><span class="checkmark"></span></label></td>
+            <td class="case" id="I2"><label class="container"><input type="checkbox" name="I2" value="1" onclick="chkcontrol(17)"><span class="checkmark"></span></label></td>
+          </tr>
+          <tr>
+            <td class="ligne">3</td>
+            <td class="case" id="A3"><label class="container"><input type="checkbox" name="A3" value="1" onclick="chkcontrol(18)"><span class="checkmark"></span></label></td>
+            <td class="case" id="B3"><label class="container"><input type="checkbox" name="B3" value="1" onclick="chkcontrol(19)"><span class="checkmark"></span></label></td>
+            <td class="case" id="C3"><label class="container"><input type="checkbox" name="C3" value="1" onclick="chkcontrol(20)"><span class="checkmark"></span></label></td>
+            <td class="case" id="D3"><label class="container"><input type="checkbox" name="D3" value="1" onclick="chkcontrol(21)"><span class="checkmark"></span></label></td>
+            <td class="case" id="E3"><label class="container"><input type="checkbox" name="E3" value="1" onclick="chkcontrol(22)"><span class="checkmark"></span></label></td>
+            <td class="case" id="F3"><label class="container"><input type="checkbox" name="F3" value="1" onclick="chkcontrol(23)"><span class="checkmark"></span></label></td>
+            <td class="case" id="G3"><label class="container"><input type="checkbox" name="G3" value="1" onclick="chkcontrol(24)"><span class="checkmark"></span></label></td>
+            <td class="case" id="H3"><label class="container"><input type="checkbox" name="H3" value="1" onclick="chkcontrol(25)"><span class="checkmark"></span></label></td>
+            <td class="case" id="I3"><label class="container"><input type="checkbox" name="I3" value="1" onclick="chkcontrol(26)"><span class="checkmark"></span></label></td>
+          </tr>
+          <tr>
+            <td class="ligne">4</td>
+            <td class="case" id="A4"><label class="container"><input type="checkbox" name="A4" value="1" onclick="chkcontrol(27)"><span class="checkmark"></span></label></td>
+            <td class="case" id="B4"><label class="container"><input type="checkbox" name="B4" value="1" onclick="chkcontrol(28)"><span class="checkmark"></span></label></td>
+            <td class="case" id="C4"><label class="container"><input type="checkbox" name="C4" value="1" onclick="chkcontrol(29)"><span class="checkmark"></span></label></td>
+            <td class="case" id="D4"><label class="container"><input type="checkbox" name="D4" value="1" onclick="chkcontrol(30)"><span class="checkmark"></span></label></td>
+            <td class="case" id="E4"><label class="container"><input type="checkbox" name="E4" value="1" onclick="chkcontrol(31)"><span class="checkmark"></span></label></td>
+            <td class="case" id="F4"><label class="container"><input type="checkbox" name="F4" value="1" onclick="chkcontrol(32)"><span class="checkmark"></span></label></td>
+            <td class="case" id="G4"><label class="container"><input type="checkbox" name="G4" value="1" onclick="chkcontrol(33)"><span class="checkmark"></span></label></td>
+            <td class="case" id="H4"><label class="container"><input type="checkbox" name="H4" value="1" onclick="chkcontrol(34)"><span class="checkmark"></span></label></td>
+            <td class="case" id="I4"><label class="container"><input type="checkbox" name="I4" value="1" onclick="chkcontrol(35)"><span class="checkmark"></span></label></td>
+          </tr>
+          <tr>
+            <td class="ligne">5</td>
+            <td class="case" id="A5"><label class="container"><input type="checkbox" name="A5" value="1" onclick="chkcontrol(36)"><span class="checkmark"></span></label></td>
+            <td class="case" id="B5"><label class="container"><input type="checkbox" name="B5" value="1" onclick="chkcontrol(37)"><span class="checkmark"></span></label></td>
+            <td class="case" id="C5"><label class="container"><input type="checkbox" name="C5" value="1" onclick="chkcontrol(38)"><span class="checkmark"></span></label></td>
+            <td class="case" id="D5"><label class="container"><input type="checkbox" name="D5" value="1" onclick="chkcontrol(39)"><span class="checkmark"></span></label></td>
+            <td class="case" id="E5"><label class="container"><input type="checkbox" name="E5" value="1" onclick="chkcontrol(40)"><span class="checkmark"></span></label></td>
+            <td class="case" id="F5"><label class="container"><input type="checkbox" name="F5" value="1" onclick="chkcontrol(41)"><span class="checkmark"></span></label></td>
+            <td class="case" id="G5"><label class="container"><input type="checkbox" name="G5" value="1" onclick="chkcontrol(42)"><span class="checkmark"></span></label></td>
+            <td class="case" id="H5"><label class="container"><input type="checkbox" name="H5" value="1" onclick="chkcontrol(43)"><span class="checkmark"></span></label></td>
+            <td class="case" id="I5"><label class="container"><input type="checkbox" name="I5" value="1" onclick="chkcontrol(44)"><span class="checkmark"></span></label></td>
+          </tr>
+          <tr>
+            <td class="ligne">6</td>
+            <td class="case" id="A6"><label class="container"><input type="checkbox" name="A6" value="1" onclick="chkcontrol(45)"><span class="checkmark"></span></label></td>
+            <td class="case" id="B6"><label class="container"><input type="checkbox" name="B6" value="1" onclick="chkcontrol(46)"><span class="checkmark"></span></label></td>
+            <td class="case" id="C6"><label class="container"><input type="checkbox" name="C6" value="1" onclick="chkcontrol(47)"><span class="checkmark"></span></label></td>
+            <td class="case" id="D6"><label class="container"><input type="checkbox" name="D6" value="1" onclick="chkcontrol(48)"><span class="checkmark"></span></label></td>
+            <td class="case" id="E6"><label class="container"><input type="checkbox" name="E6" value="1" onclick="chkcontrol(49)"><span class="checkmark"></span></label></td>
+            <td class="case" id="F6"><label class="container"><input type="checkbox" name="F6" value="1" onclick="chkcontrol(50)"><span class="checkmark"></span></label></td>
+            <td class="case" id="G6"><label class="container"><input type="checkbox" name="G6" value="1" onclick="chkcontrol(51)"><span class="checkmark"></span></label></td>
+            <td class="case" id="H6"><label class="container"><input type="checkbox" name="H6" value="1" onclick="chkcontrol(52)"><span class="checkmark"></span></label></td>
+            <td class="case" id="I6"><label class="container"><input type="checkbox" name="I6" value="1" onclick="chkcontrol(53)"><span class="checkmark"></span></label></td>
+          </tr>
+          <tr>
+            <td class="ligne">7</td>
+            <td class="case" id="A7"><label class="container"><input type="checkbox" name="A7" value="1" onclick="chkcontrol(54)"><span class="checkmark"></span></label></td>
+            <td class="case" id="B7"><label class="container"><input type="checkbox" name="B7" value="1" onclick="chkcontrol(55)"><span class="checkmark"></span></label></td>
+            <td class="case" id="C7"><label class="container"><input type="checkbox" name="C7" value="1" onclick="chkcontrol(56)"><span class="checkmark"></span></label></td>
+            <td class="case" id="D7"><label class="container"><input type="checkbox" name="D7" value="1" onclick="chkcontrol(57)"><span class="checkmark"></span></label></td>
+            <td class="case" id="E7"><label class="container"><input type="checkbox" name="E7" value="1" onclick="chkcontrol(58)"><span class="checkmark"></span></label></td>
+            <td class="case" id="F7"><label class="container"><input type="checkbox" name="F7" value="1" onclick="chkcontrol(59)"><span class="checkmark"></span></label></td>
+            <td class="case" id="G7"><label class="container"><input type="checkbox" name="G7" value="1" onclick="chkcontrol(60)"><span class="checkmark"></span></label></td>
+            <td class="case" id="H7"><label class="container"><input type="checkbox" name="H7" value="1" onclick="chkcontrol(61)"><span class="checkmark"></span></label></td>
+            <td class="case" id="I7"><label class="container"><input type="checkbox" name="I7" value="1" onclick="chkcontrol(62)"><span class="checkmark"></span></label></td>
+          </tr>
+          <tr>
+            <td class="ligne">8</td>
+            <td class="case" id="A8"><label class="container"><input type="checkbox" name="A8" value="1" onclick="chkcontrol(63)"><span class="checkmark"></span></label></td>
+            <td class="case" id="B8"><label class="container"><input type="checkbox" name="B8" value="1" onclick="chkcontrol(64)"><span class="checkmark"></span></label></td>
+            <td class="case" id="C8"><label class="container"><input type="checkbox" name="C8" value="1" onclick="chkcontrol(65)"><span class="checkmark"></span></label></td>
+            <td class="case" id="D8"><label class="container"><input type="checkbox" name="D8" value="1" onclick="chkcontrol(66)"><span class="checkmark"></span></label></td>
+            <td class="case" id="E8"><label class="container"><input type="checkbox" name="E8" value="1" onclick="chkcontrol(67)"><span class="checkmark"></span></label></td>
+            <td class="case" id="F8"><label class="container"><input type="checkbox" name="F8" value="1" onclick="chkcontrol(68)"><span class="checkmark"></span></label></td>
+            <td class="case" id="G8"><label class="container"><input type="checkbox" name="G8" value="1" onclick="chkcontrol(69)"><span class="checkmark"></span></label></td>
+            <td class="case" id="H8"><label class="container"><input type="checkbox" name="H8" value="1" onclick="chkcontrol(70)"><span class="checkmark"></span></label></td>
+            <td class="case" id="I8"><label class="container"><input type="checkbox" name="I8" value="1" onclick="chkcontrol(71)"><span class="checkmark"></span></label></td>
+          </tr>
+          <tr>
+            <td class="ligne">9</td>
+            <td class="case" id="A9"><label class="container"><input type="checkbox" name="A9" value="1" onclick="chkcontrol(72)"><span class="checkmark"></span></label></td>
+            <td class="case" id="B9"><label class="container"><input type="checkbox" name="B9" value="1" onclick="chkcontrol(73)"><span class="checkmark"></span></label></td>
+            <td class="case" id="C9"><label class="container"><input type="checkbox" name="C9" value="1" onclick="chkcontrol(74)"><span class="checkmark"></span></label></td>
+            <td class="case" id="D9"><label class="container"><input type="checkbox" name="D9" value="1" onclick="chkcontrol(75)"><span class="checkmark"></span></label></td>
+            <td class="case" id="E9"><label class="container"><input type="checkbox" name="E9" value="1" onclick="chkcontrol(76)"><span class="checkmark"></span></label></td>
+            <td class="case" id="F9"><label class="container"><input type="checkbox" name="F9" value="1" onclick="chkcontrol(77)"><span class="checkmark"></span></label></td>
+            <td class="case" id="G9"><label class="container"><input type="checkbox" name="G9" value="1" onclick="chkcontrol(78)"><span class="checkmark"></span></label></td>
+            <td class="case" id="H9"><label class="container"><input type="checkbox" name="H9" value="1" onclick="chkcontrol(79)"><span class="checkmark"></span></label></td>
+            <td class="case" id="I9"><label class="container"><input type="checkbox" name="I9" value="1" onclick="chkcontrol(80)"><span class="checkmark"></span></label></td>
+          </tr>
+        </table>
+      <br/>
+            
+        <center><input class="file_submit" type="Submit"></center>
+
+      </form>
+      
+    </body>
+
+</html>

@@ -1,0 +1,347 @@
+<html> 
+	<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../static/index.css"> 
+	</head>
+	
+	<body class="bg">
+    
+    <div style="display:flex">
+      <div style="width:50%">
+        <h2>Votre champs de bataille</h2>
+        <table>  
+          <tr>
+            <td class="colonne ligne"></td>
+            <td class="colonne">A</td>
+            <td class="colonne">B</td> 
+            <td class="colonne">C</td>
+            <td class="colonne">D</td>
+            <td class="colonne">E</td>
+            <td class="colonne">F</td>
+            <td class="colonne">G</td>
+            <td class="colonne">H</td>
+            <td class="colonne">I</td>
+          </tr>
+          <tr>
+            <td class="ligne">1</td>
+            <td class="case" id="your_A1"></td>
+            <td class="case" id="your_B1"></td>
+            <td class="case" id="your_C1"></td>
+            <td class="case" id="your_D1"></td>
+            <td class="case" id="your_E1"></td>
+            <td class="case" id="your_F1"></td>
+            <td class="case" id="your_G1"></td>
+            <td class="case" id="your_H1"></td>
+            <td class="case" id="your_I1"></td>
+          </tr>
+          <tr>
+            <td class="ligne">2</td>
+            <td class="case" id="your_A2"></td>
+            <td class="case" id="your_B2"></td>
+            <td class="case" id="your_C2"></td>
+            <td class="case" id="your_D2"></td>
+            <td class="case" id="your_E2"></td>
+            <td class="case" id="your_F2"></td>
+            <td class="case" id="your_G2"></td>
+            <td class="case" id="your_H2"></td>
+            <td class="case" id="your_I2"></td>
+          </tr>
+          <tr>
+            <td class="ligne">3</td>
+            <td class="case" id="your_A3"></td>
+            <td class="case" id="your_B3"></td>
+            <td class="case" id="your_C3"></td>
+            <td class="case" id="your_D3"></td>
+            <td class="case" id="your_E3"></td>
+            <td class="case" id="your_F3"></td>
+            <td class="case" id="your_G3"></td>
+            <td class="case" id="your_H3"></td>
+            <td class="case" id="your_I3"></td>
+          </tr>
+          <tr>
+            <td class="ligne">4</td>
+            <td class="case" id="your_A4"></td>
+            <td class="case" id="your_B4"></td>
+            <td class="case" id="your_C4"></td>
+            <td class="case" id="your_D4"></td>
+            <td class="case" id="your_E4"></td>
+            <td class="case" id="your_F4"></td>
+            <td class="case" id="your_G4"></td>
+            <td class="case" id="your_H4"></td>
+            <td class="case" id="your_I4"></td>
+          </tr>
+          <tr>
+            <td class="ligne">5</td>
+            <td class="case" id="your_A5"></td>
+            <td class="case" id="your_B5"></td>
+            <td class="case" id="your_C5"></td>
+            <td class="case" id="your_D5"></td>
+            <td class="case" id="your_E5"></td>
+            <td class="case" id="your_F5"></td>
+            <td class="case" id="your_G5"></td>
+            <td class="case" id="your_H5"></td>
+            <td class="case" id="your_I5"></td>
+          </tr>
+          <tr>
+            <td class="ligne">6</td>
+            <td class="case" id="your_A6"></td>
+            <td class="case" id="your_B6"></td>
+            <td class="case" id="your_C6"></td>
+            <td class="case" id="your_D6"></td>
+            <td class="case" id="your_E6"></td>
+            <td class="case" id="your_F6"></td>
+            <td class="case" id="your_G6"></td>
+            <td class="case" id="your_H6"></td>
+            <td class="case" id="your_I6"></td>
+          </tr>
+          <tr>
+            <td class="ligne">7</td>
+            <td class="case" id="your_A7"></td>
+            <td class="case" id="your_B7"></td>
+            <td class="case" id="your_C7"></td>
+            <td class="case" id="your_D7"></td>
+            <td class="case" id="your_E7"></td>
+            <td class="case" id="your_F7"></td>
+            <td class="case" id="your_G7"></td>
+            <td class="case" id="your_H7"></td>
+            <td class="case" id="your_I7"></td>
+          </tr>
+          <tr>
+            <td class="ligne">8</td>
+            <td class="case" id="your_A8"></td>
+            <td class="case" id="your_B8"></td>
+            <td class="case" id="your_C8"></td>
+            <td class="case" id="your_D8"></td>
+            <td class="case" id="your_E8"></td>
+            <td class="case" id="your_F8"></td>
+            <td class="case" id="your_G8"></td>
+            <td class="case" id="your_H8"></td>
+            <td class="case" id="your_I8"></td>
+          </tr>
+          <tr>
+            <td class="ligne">9</td>
+            <td class="case" id="your_A9"></td>
+            <td class="case" id="your_B9"></td>
+            <td class="case" id="your_C9"></td>
+            <td class="case" id="your_D9"></td>
+            <td class="case" id="your_E9"></td>
+            <td class="case" id="your_F9"></td>
+            <td class="case" id="your_G9"></td>
+            <td class="case" id="your_H9"></td>
+            <td class="case" id="your_I9"></td>
+          </tr>
+        </table>
+      </div>
+
+      <form style="width:50%" action="/result" method="POST">
+
+        <div>
+          <h2>Champs de bataille de l'ennemi</h2>
+          <table>  
+            <tr>
+              <td class="colonne ligne"></td>
+              <td class="colonne">A</td>
+              <td class="colonne">B</td> 
+              <td class="colonne">C</td>
+              <td class="colonne">D</td>
+              <td class="colonne">E</td>
+              <td class="colonne">F</td>
+              <td class="colonne">G</td>
+              <td class="colonne">H</td>
+              <td class="colonne">I</td>
+            </tr>
+            <tr>
+              <td class="ligne">1</td>
+              <td class="case" id="his_A1"><label class="cible"><input type="submit" name="A1" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_B1"><label class="cible"><input type="submit" name="B1" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_C1"><label class="cible"><input type="submit" name="C1" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_D1"><label class="cible"><input type="submit" name="D1" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_E1"><label class="cible"><input type="submit" name="E1" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_F1"><label class="cible"><input type="submit" name="F1" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_G1"><label class="cible"><input type="submit" name="G1" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_H1"><label class="cible"><input type="submit" name="H1" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_I1"><label class="cible"><input type="submit" name="I1" value=""><span class="ciblemark"></span></label></td>
+            </tr>
+            <tr>
+              <td class="ligne">2</td>
+              <td class="case" id="his_A2"><label class="cible"><input type="submit" name="A1" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_B2"><label class="cible"><input type="submit" name="B2" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_C2"><label class="cible"><input type="submit" name="C2" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_D2"><label class="cible"><input type="submit" name="D2" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_E2"><label class="cible"><input type="submit" name="E2" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_F2"><label class="cible"><input type="submit" name="F2" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_G2"><label class="cible"><input type="submit" name="G2" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_H2"><label class="cible"><input type="submit" name="H2" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_I2"><label class="cible"><input type="submit" name="I2" value=""><span class="ciblemark"></span></label></td>
+            </tr>
+            <tr>
+              <td class="ligne">3</td>
+              <td class="case" id="his_A3"><label class="cible"><input type="submit" name="A3" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_B3"><label class="cible"><input type="submit" name="B3" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_C3"><label class="cible"><input type="submit" name="C3" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_D3"><label class="cible"><input type="submit" name="D3" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_E3"><label class="cible"><input type="submit" name="E3" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_F3"><label class="cible"><input type="submit" name="F3" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_G3"><label class="cible"><input type="submit" name="G3" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_H3"><label class="cible"><input type="submit" name="H3" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_I3"><label class="cible"><input type="submit" name="I3" value=""><span class="ciblemark"></span></label></td>
+            </tr>
+            <tr>
+              <td class="ligne">4</td>
+              <td class="case" id="his_A4"><label class="cible"><input type="submit" name="A4" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_B4"><label class="cible"><input type="submit" name="B4" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_C4"><label class="cible"><input type="submit" name="C4" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_D4"><label class="cible"><input type="submit" name="D4" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_E4"><label class="cible"><input type="submit" name="E4" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_F4"><label class="cible"><input type="submit" name="F4" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_G4"><label class="cible"><input type="submit" name="G4" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_H4"><label class="cible"><input type="submit" name="H4" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_I4"><label class="cible"><input type="submit" name="I4" value=""><span class="ciblemark"></span></label></td>
+            </tr>
+            <tr>
+              <td class="ligne">5</td>
+              <td class="case" id="his_A5"><label class="cible"><input type="submit" name="A5" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_B5"><label class="cible"><input type="submit" name="B5" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_C5"><label class="cible"><input type="submit" name="C5" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_D5"><label class="cible"><input type="submit" name="D5" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_E5"><label class="cible"><input type="submit" name="E5" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_F5"><label class="cible"><input type="submit" name="F5" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_G5"><label class="cible"><input type="submit" name="G5" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_H5"><label class="cible"><input type="submit" name="H5" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_I5"><label class="cible"><input type="submit" name="I5" value=""><span class="ciblemark"></span></label></td>
+            </tr>
+            <tr>
+              <td class="ligne">6</td>
+              <td class="case" id="his_A6"><label class="cible"><input type="submit" name="A6" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_B6"><label class="cible"><input type="submit" name="B6" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_C6"><label class="cible"><input type="submit" name="C6" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_D6"><label class="cible"><input type="submit" name="D6" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_E6"><label class="cible"><input type="submit" name="E6" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_F6"><label class="cible"><input type="submit" name="F6" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_G6"><label class="cible"><input type="submit" name="G6" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_H6"><label class="cible"><input type="submit" name="H6" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_I6"><label class="cible"><input type="submit" name="I6" value=""><span class="ciblemark"></span></label></td>
+            </tr>
+            <tr>
+              <td class="ligne">7</td>
+              <td class="case" id="his_A7"><label class="cible"><input type="submit" name="A7" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_B7"><label class="cible"><input type="submit" name="B7" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_C7"><label class="cible"><input type="submit" name="C7" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_D7"><label class="cible"><input type="submit" name="D7" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_E7"><label class="cible"><input type="submit" name="E7" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_F7"><label class="cible"><input type="submit" name="F7" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_G7"><label class="cible"><input type="submit" name="G7" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_H7"><label class="cible"><input type="submit" name="H7" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_I7"><label class="cible"><input type="submit" name="I7" value=""><span class="ciblemark"></span></label></td>
+            </tr>
+            <tr>
+              <td class="ligne">8</td>
+              <td class="case" id="his_A8"><label class="cible"><input type="submit" name="A8" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_B8"><label class="cible"><input type="submit" name="B8" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_C8"><label class="cible"><input type="submit" name="C8" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_D8"><label class="cible"><input type="submit" name="D8" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_E8"><label class="cible"><input type="submit" name="E8" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_F8"><label class="cible"><input type="submit" name="F8" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_G8"><label class="cible"><input type="submit" name="G8" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_H8"><label class="cible"><input type="submit" name="H8" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_I8"><label class="cible"><input type="submit" name="I8" value=""><span class="ciblemark"></span></label></td>
+            </tr>
+            <tr>
+              <td class="ligne">9</td>
+              <td class="case" id="his_A9"><label class="cible"><input type="submit" name="A9" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_B9"><label class="cible"><input type="submit" name="B9" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_C9"><label class="cible"><input type="submit" name="C9" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_D9"><label class="cible"><input type="submit" name="D9" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_E9"><label class="cible"><input type="submit" name="E9" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_F9"><label class="cible"><input type="submit" name="F9" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_G9"><label class="cible"><input type="submit" name="G9" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_H9"><label class="cible"><input type="submit" name="H9" value=""><span class="ciblemark"></span></label></td>
+              <td class="case" id="his_I9"><label class="cible"><input type="submit" name="I9" value=""><span class="ciblemark"></span></label></td>
+            </tr>
+          </table>
+        </div>
+
+      </form>
+
+    </div>
+    <br/>
+
+    {% if your_action %}
+      
+    {% endif %}
+
+    {% if win != "En cours" %}
+      <center>
+        <h2 class="let_space" style="margin-top:-0.6em">Vous avez {{win}}</h2>
+        <h3 class="let_space">Historique : {{your_action}}</h3>
+      </center> 
+      <script>
+        (function () {
+          var submits = document.querySelectorAll('input[type=submit]');
+          var win = {{win | tojson}};
+          if (win == "Gagné"){
+            alert("Féléicitation, vous avez gagné la bataille.\n\nReste à gagner la guerre !");
+          }
+          else if (win == "Perdu")
+          {
+            alert("Laisse tomber frère, t'as perdu !");
+          }
+          for(var i=0; i < submits.length; i++)
+          {
+            submits[i].type = "text";
+          }
+        }) ();
+      </script> 
+
+    {% endif %}
+
+    <script>
+      function put_ship() {
+        var boat = {{your_boat | tojson}};
+        for(var b = 0; b < boat.length; b++)
+        {
+          document.getElementById("your_"+boat[b]).style.backgroundImage = "url('./../static/img/ship.png')";
+        }
+      };
+      
+      function put_his_action() {
+        var action = {{his_action | tojson}};
+        var reward = {{his_reward | tojson}};
+        for(var a = 0; a < action.length; a++)
+        {
+          if(reward[a] == "Tombé")
+          {
+            document.getElementById("your_"+action[a]).style.backgroundImage = "url('./../static/img/fail.png')";
+          }
+          else if(reward[a] == "Touché")
+          {
+            document.getElementById("your_"+action[a]).style.backgroundImage = "url('./../static/img/fire.png')";
+          }
+        }
+      };
+
+      function put_your_action() {
+        var action = {{your_action | tojson}};
+        var reward = {{your_reward | tojson}};
+        for(var a = 0; a < action.length; a++)
+        {
+          if(reward[a] == "Tombé")
+          {
+            document.getElementById("his_"+action[a]).style.backgroundImage = "url('./../static/img/fail.png')";
+          }
+          else if(reward[a] == "Touché")
+          {
+            document.getElementById("his_"+action[a]).style.backgroundImage = "url('./../static/img/fire.png')";
+          }
+        }
+      };
+
+      put_ship();
+      put_his_action();
+      put_your_action();
+
+    </script>
+
+  </body>
+
+</html>
