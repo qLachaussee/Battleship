@@ -5,7 +5,7 @@ import pandas as pd
 app = Flask(__name__)
 host = 'localhost' #client ip
 port = 4005
-server = ('localhost', 4000)
+server = (host, 4000)
 your_board, his_board = pd.DataFrame([[0]*9]*9, columns=["A","B","C","D","E","F","G","H","I"], index=range(1,10)), pd.DataFrame([[0]*9]*9, columns=["A","B","C","D","E","F","G","H","I"], index=range(1,10))
 your_boat, his_boat = [], []
 your_action, his_action = [], []
