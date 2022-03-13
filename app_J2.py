@@ -3,9 +3,11 @@ import socket
 import pandas as pd
 
 app = Flask(__name__)
-host = 'localhost' #client ip
+
+host = socket.gethostname()
 port = 4000
-server = (host, 4005)
+server = ("DESKTOP-G530RU6", 4005) #le host name du serveur (host si on travail sur le même PC)
+
 your_board, his_board = pd.DataFrame([[0]*9]*9, columns=["A","B","C","D","E","F","G","H","I"], index=range(1,10)), pd.DataFrame([[0]*9]*9, columns=["A","B","C","D","E","F","G","H","I"], index=range(1,10))
 your_boat, his_boat = [], []
 your_action, his_action = [], []

@@ -2,10 +2,10 @@ import socket
 
 def Main():
 
-    host='localhost' #client ip
+    host = socket.gethostname()
     port = 4005
     
-    server = ('localhost', 4000)
+    server = (host, 4000) #le host name du serveur (host si on travail sur le même PC)
     
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.bind((host,port))

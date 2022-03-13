@@ -2,7 +2,7 @@ import socket
 
 def Main():
    
-    host = 'localhost' #Server ip
+    host = socket.gethostname()
     port = 4000
 
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
