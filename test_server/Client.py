@@ -5,7 +5,7 @@ def Main():
     host = socket.gethostname()
     port = 4005
     
-    server = (host, 4000) #le host name du serveur (host si on travail sur le même PC)
+    server = (host, 4000) #le host name du serveur (host si on travail sur le même PC | "DESKTOP-G530RU6" si on travail avec mon PC perso | "PO-7545" si on travail avec mon PC pro)
     
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.bind((host,port))
