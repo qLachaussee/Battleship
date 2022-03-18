@@ -341,10 +341,16 @@
           if(reward[a] == "Tombé")
           {
             document.getElementById("his_"+action[a]).style.backgroundImage = "url('./../static/img/fail.png')";
+            while (document.getElementById("his_"+action[a]).firstChild) {
+              document.getElementById("his_"+action[a]).removeChild(document.getElementById("his_"+action[a]).firstChild);
+            }
           }
           else if(reward[a] == "Touché")
           {
             document.getElementById("his_"+action[a]).style.backgroundImage = "url('./../static/img/fire.png')";
+            while (document.getElementById("his_"+action[a]).firstChild) {
+              document.getElementById("his_"+action[a]).removeChild(document.getElementById("his_"+action[a]).firstChild);
+            }
           }
         }
       };
