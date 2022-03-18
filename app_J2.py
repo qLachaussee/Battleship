@@ -6,12 +6,13 @@ app = Flask(__name__)
 
 host = socket.gethostname()
 port = 4000
-server = ("DESKTOP-G530RU6", 4005) #le host name du serveur (host si on travail sur le même PC | "DESKTOP-G530RU6" si on travail avec mon PC perso | "PO-7545" si on travail avec mon PC pro)
+#server = ("PO-7545", 4005) #le host name du serveur (host si on travail sur le même PC | "DESKTOP-G530RU6" si on travail avec mon PC perso | "PO-7545" si on travail avec mon PC pro)
 
 your_board, his_board = pd.DataFrame([[0]*9]*9, columns=["A","B","C","D","E","F","G","H","I"], index=range(1,10)), pd.DataFrame([[0]*9]*9, columns=["A","B","C","D","E","F","G","H","I"], index=range(1,10))
 your_boat, his_boat = [], []
 your_action, his_action = [], []
 your_reward, his_reward = [], []
+server = []
 
 @app.route('/')
 def init():
@@ -28,6 +29,7 @@ def home():
     s.bind((host, port))
 
     message, addr = s.recvfrom(1024)
+    server.append(addr)
     message = message.decode('utf-8')
     his_action.append(message)
 
@@ -51,7 +53,7 @@ def result():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.bind((host, port))
 
-    s.sendto(his_reward[-1].encode('utf-8') + ";".encode('utf-8') + action.encode('utf-8'), server)
+    s.sendto(his_reward[-1].encode('utf-8') + ";".encode('utf-8') + action.encode('utf-8'), server[-1])
     
     reponse, addr = s.recvfrom(1024)
     reponse = reponse.decode('utf-8')
@@ -69,7 +71,7 @@ def result():
     his_reward.append(reward)
 
     if his_reward.count("Touché") == 3:
-        s.sendto(his_reward[-1].encode('utf-8') + ";".encode('utf-8') + "Fin".encode('utf-8'), server)
+        s.sendto(his_reward[-1].encode('utf-8') + ";".encode('utf-8') + "Fin".encode('utf-8'), server[-1])
         return render_template("index.html", your_boat=your_boat, your_action=your_action, your_reward=your_reward, his_action=his_action, his_reward=his_reward, win="Perdu")
 
     return render_template("index.html", your_boat=your_boat, your_action=your_action, your_reward=your_reward, his_action=his_action, his_reward=his_reward, win="En cours")
