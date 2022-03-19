@@ -1,4 +1,5 @@
-<html> 
+<html>
+  
 	<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../static/style.css"> 
@@ -7,6 +8,9 @@
 	<body class="bg">
     
     <div style="display:flex">
+      
+      <!-- Partie Gauche : Champ de bataille du joueur -->
+
       <div style="width:50%">
         <h2>Votre champs de bataille</h2>
         <table>  
@@ -133,8 +137,9 @@
         </table>
       </div>
 
-      <form style="width:50%" action="/result" method="POST">
+      <!-- Partie Droite : Champ de bataille de l'ennemi -->
 
+      <form style="width:50%" action="/result" method="POST">
         <div>
           <h2>Champs de bataille de l'ennemi</h2>
           <table>  
@@ -264,7 +269,10 @@
       </form>
 
     </div>
+
     <br/>
+
+    <!-- Partie du Bas : Panneau d'affichage des résultats -->
 
     {% if win == "En cours" %}
       <center>
@@ -273,13 +281,13 @@
             Tu l'as loupé mec, ressaisis-toi !</h2>
           {% elif your_reward[-1] == "Touché" %}
             Wou-hou, en plein dans sa gueule !</h2>
-        {% endif %}
+          {% endif %}
         <h2 class="let_space"><i style="color:lightcoral;">Son resultat :</i>
-        {% if his_reward[-1] == "Tombé" %}
-          T'inquiète, il t'a loupé ce hmar !</h2>
-        {% elif his_reward[-1] == "Touché" %}
-          Attention, il t'a coulé un bateau ce bâtard !</h2>
-        {% endif %}
+          {% if his_reward[-1] == "Tombé" %}
+            T'inquiète, il t'a loupé ce hmar !</h2>
+          {% elif his_reward[-1] == "Touché" %}
+            Attention, il t'a coulé un bateau ce bâtard !</h2>
+          {% endif %}
       </center> 
     {% endif %}
 
@@ -287,8 +295,9 @@
       <center>
         <h2 class="let_space" style="margin-top:-0.6em; color:lightgoldenrodyellow;">Vous avez {{win}} !!!</h2>
         <h3 class="let_space" style="color:seashell;">Historique : {{your_action}}</h3>
-      </center> 
-      <script>
+      </center>
+
+      <script> /// Je n'ai pas pu mettre cette fonction js dans "script.js" car j'ai besoin de récupérer la variable "win" qui m'ait délivrée grâce à la librairie Flask
         (function () {
           var submits = document.querySelectorAll('input[type=submit]');
           var win = {{win | tojson}};
@@ -303,12 +312,12 @@
           {
             submits[i].type = "text";
           }
-        }) ();
+        }) (); /// va afficher un pop-up pour afficher le résultat de la partie entre gagné ou perdu
       </script> 
 
     {% endif %}
 
-    <script>
+    <script> /// Je n'ai pas pu mettre cette fonction js dans "script.js" car j'ai besoin de récupérer plusieurs variables qui me sont délivrée grâce à la librairie Flask
       function put_ship() {
         var boat = {{your_boat | tojson}};
         for(var b = 0; b < boat.length; b++)
@@ -355,9 +364,9 @@
         }
       };
 
-      put_ship();
-      put_his_action();
-      put_your_action();
+      put_ship(); /// va placer vos bateaux dans le plateau de gauche
+      put_his_action(); /// va inscrire les actions de l'ennemi dans le plateau de gauche
+      put_your_action(); /// va inscrire vos action dans le plateau de droite
 
     </script>
 
