@@ -1,5 +1,5 @@
 <html>
-  
+
 	<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../static/style.css"> 
@@ -13,7 +13,10 @@
 
       <div style="width:50%">
         <h2>Votre champs de bataille</h2>
-        <table>  
+        <table>
+          <!-- la classe "colonne" retire les bordures du haut -->
+          <!-- la classe "ligne" retire les bordures de gauche -->
+          <!-- la classe "case" permet de d'identifier les cases de jeu -->
           <tr>
             <td class="colonne ligne"></td>
             <td class="colonne">A</td>
@@ -142,7 +145,12 @@
       <form style="width:50%" action="/result" method="POST">
         <div>
           <h2>Champs de bataille de l'ennemi</h2>
-          <table>  
+          <table>
+            <!-- la classe "colonne" retire les bordures du haut -->
+            <!-- la classe "ligne" retire les bordures de gauche -->
+            <!-- la classe "case" permet de d'identifier les cases de jeu -->
+            <!-- la classe "cible" permet le ciblage des bateaux -->
+            <!-- la classe "ciblemark" permet d'afficher une cible -->            
             <tr>
               <td class="colonne ligne"></td>
               <td class="colonne">A</td>

@@ -1,5 +1,5 @@
 <html>
-  
+
 	<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../static/style.css"> 
@@ -11,8 +11,14 @@
     <!-- Grille de placement des bateaux -->
 
     <form class="form" action="/home" method="POST" onsubmit="return valider()">
+      <!-- Le formulaire vérifiera que 3 bateaux ont bien été positionnés -->
       <h1>Choisissez 3 cases pour placer vos bateaux</h1>
-      <table>  
+      <table>
+        <!-- la classe "colonne" retire les bordures du haut -->
+        <!-- la classe "ligne" retire les bordures de gauche -->
+        <!-- la classe "case" permet de d'identifier les cases de jeu -->
+        <!-- la classe "container" permet le placement des bateaux -->
+        <!-- la classe "checkmark" permet d'afficher les placements --> 
         <tr>
           <td class="colonne ligne"></td>
           <td class="colonne">A</td>

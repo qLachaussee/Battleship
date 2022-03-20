@@ -8,7 +8,6 @@
 
 from flask import Flask, render_template, request
 import socket
-import pandas as pd
 
 #################
 # Instanciation #
@@ -22,7 +21,6 @@ host = socket.gethostname()
 port = 4005
 
 # On instancie nos listes globales pour conserver en mémoire votre plateau de jeu
-your_board, his_board = pd.DataFrame([[0]*9]*9, columns=["A","B","C","D","E","F","G","H","I"], index=range(1,10)), pd.DataFrame([[0]*9]*9, columns=["A","B","C","D","E","F","G","H","I"], index=range(1,10))
 your_boat, his_boat = [], []
 
 # On instancie nos listes globales pour conserver l'historique de nos actions
@@ -51,7 +49,6 @@ def home():
 
     # pour les incorporer à nos listes global correspondant au plateau
     for k in output.keys():
-        your_board.loc[int(k[1]),k[0]] = 1
         your_boat.append(k)
 
     # on retourne la page de jeu
